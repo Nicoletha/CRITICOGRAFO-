@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRITICOGRAFO_.MainPage">
+
+    <StackLayout Padding="20">
+        <Label Text="Actividad: Criticografo!"
+           FontSize="Large"
+           HorizontalOptions="Center"
+           Padding="0,10,0,20"/>
+
+        <Entry x:Name="NombreEntry"
+           Placeholder="Nombre"
+           HorizontalOptions="FillAndExpand"/>
+
+        <Label Text="Género:"
+           FontSize="Medium"
+           Padding="0,10,0,5"/>
+
+        <StackLayout Orientation="Horizontal" Padding="0,0,0,5">
+            <RadioButton x:Name="HombreRadio"
+                 Content="Hombre"
+                 GroupName="Genero"
+                 CheckedChanged="OnGeneroChanged"
+                 Margin="0,0,20,0"/>
+            <RadioButton x:Name="MujerRadio"
+                 Content="Mujer"
+                 GroupName="Genero"
+                 CheckedChanged="OnGeneroChanged"/>
+        </StackLayout>
+
+        <Label Text="Atributos:"
+           FontSize="Medium"
+           Padding="0,20,0,5"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox x:Name="AltoCheckBox" Grid.Row="0" Grid.Column="0" Margin="10"/>
+            <Label x:Name="AltoLabel" Text="Alto" Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+
+            <CheckBox x:Name="FeoCheckBox" Grid.Row="0" Grid.Column="2" Margin="10"/>
+            <Label x:Name="FeoLabel" Text="Feo" Grid.Row="0" Grid.Column="3" VerticalOptions="Center"/>
+
+            <CheckBox x:Name="ListoCheckBox" Grid.Row="1" Grid.Column="0" Margin="10"/>
+            <Label x:Name="ListoLabel" Text="Listo" Grid.Row="1" Grid.Column="1" VerticalOptions="Center"/>
+
+            <CheckBox x:Name="ExtravaganteCheckBox" Grid.Row="1" Grid.Column="2" Margin="10"/>
+            <Label x:Name="ExtravaganteLabel" Text="Extravagante" Grid.Row="1" Grid.Column="3" VerticalOptions="Center"/>
+
+            <CheckBox x:Name="RaroCheckBox" Grid.Row="2" Grid.Column="0" Margin="10"/>
+            <Label x:Name="RaroLabel" Text="Raro" Grid.Row="2" Grid.Column="1" VerticalOptions="Center"/>
+
+            <CheckBox x:Name="GrandeCheckBox" Grid.Row="2" Grid.Column="2" Margin="10"/>
+            <Label x:Name="GrandeLabel" Text="Grande" Grid.Row="2" Grid.Column="3" VerticalOptions="Center"/>
+        </Grid>
+
+        <Button Text="CRITICAR"
+            HorizontalOptions="FillAndExpand"
+            BackgroundColor="Gray"
+            TextColor="Black"
+            Margin="0,20,0,0"
+            Clicked="OnCriticarClicked"/>
+    </StackLayout>
+
+</ContentPage>
